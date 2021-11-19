@@ -1,6 +1,5 @@
 import './App.css';
-import { Container, MobileContainer,TopIconContainer,Icon,ImgContent,DarkMode,Title,ToggleMode } from './AppStyle';
-import Count from './Count';
+import { Container, MobileContainer,TopIconContainer,Icon,ImgContent,DarkMode,Title,ToggleMode,Span } from './AppStyle';
 import React, {useState,useContext} from 'react';
 import {ThemeContext } from './Context';
 
@@ -19,8 +18,8 @@ const light = {
 }
 
   const onChange= () =>{
+    setTheme(mode? light:dark)
     setMode(!mode);
-    setTheme(mode? light: dark)
   }
 
 
@@ -36,7 +35,9 @@ const light = {
                 <div className="img">
                   
                 </div>
-                <p color={theme.title}>Assalomu alaykum</p>
+                <div className="text">
+                  <Span color={theme.title}>Assalomu alaykum</Span>
+                </div>
               </ImgContent>
               <DarkMode>
                   <Icon.Moon color={theme.icon} />

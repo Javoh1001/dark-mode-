@@ -63,9 +63,7 @@ export const ImgContent = styled.div`
     align-items:center;
     justify-content:center;
     margin-top:80px;
-    p{
-        color:${({color})=>color}  
-    }
+
     .img{
         width:80px;
         height:80px;
@@ -73,6 +71,9 @@ export const ImgContent = styled.div`
         background-color:pink;
     }
    
+`
+export const Span = styled.div`
+    color:${({color})=>color};
 `
 
 export const DarkMode = styled.div`
